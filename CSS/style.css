@@ -112,3 +112,10 @@ body {
 	font-family: "Satellite";
 	src: url('../assets/Satellite/Satellite.otf');
 }
+
+.zoomTarget> p{
+	visibility: hidden;
+}
+.selectedZoomTarget> p{
+	visibility: visible;
+}
