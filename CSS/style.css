@@ -4,7 +4,7 @@
 	box-sizing:border-box;
 }
 body {
-	background:url("../IMG/background2.png") no-repeat;
+	background:url("../IMG/background.jpg") no-repeat;
 	background-size:cover;
 	position:relative;
 	width:100vw;
@@ -18,7 +18,7 @@ body {
 	width:100vw;
 	height:100vh;
 	overflow:hidden;
-	background:url("../IMG/network.png") no-repeat;
+	background:url("../IMG/network.svg") no-repeat;
 	background-size:cover;
 }
 
