@@ -356,8 +356,9 @@ Matrix.I = function(n) {
         return new CssMatrix(this.m.multiply(trans));
     };
 
-    CssMatrix.prototype.scale = function(sx,sy) {
-        var trans = Matrix.create([[sx, 0, 0], [0, sy, 0], [0, 0, 1]]);
+    CssMatrix.prototype.scale = function(sx,sy) {//TODO changement pour un plus petit zoom
+		  var zoomNeg = 18;
+        var trans = Matrix.create([[sx-zoomNeg, 0, 0], [0, sy-zoomNeg, 0], [0, 0, .9]]);
         return new CssMatrix(this.m.multiply(trans));
     };
 
