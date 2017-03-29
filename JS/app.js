@@ -22,6 +22,9 @@ function setUp(){
 
   // typed content overlay
   $("#typed_title").typed({strings: ["Qu'est ce que smart city ?"],
-    typeSpeed: 30, callback: function(){$('.typed-cursor').first().hide();typed_text();}
+    typeSpeed: 30, callback: function(){
+      $('.typed-cursor').first().hide();
+      typed_text();
+    }
   });
 };
