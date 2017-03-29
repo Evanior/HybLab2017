@@ -22,13 +22,34 @@ function setUp(){
 	});
 
   // typed content overlay
-  $("#typed_title").typed({strings: ["Qu'est ce que la smart city ?"],
-    typeSpeed: 30, callback: function(){$('.typed-cursor').first().hide();typed_text();}
+  $("#typed_title").typed({strings: ["Qu'est ce que smart city ?"],
+    typeSpeed: 30, callback: function(){
+      $('.typed-cursor').first().hide();
+      typed_text();
+    }
   });
 
   // button skip overlay
   $('.overlay .overlay_content .skip').click(function(event){
     event.preventDefault();
     $('.overlay').hide();
+  });
+
+  $('.point').click(function() {
+    setTimeout(function(){
+      $('.pola1').addClass('polaAnimer');
+      setTimeout(function(){
+        $('.pola2').addClass('polaAnimer');
+        setTimeout(function(){
+          $('.pola3').addClass('polaAnimer');
+        },4000);
+      },3000);
+    },2000);
+  });
+
+  $('.zoomContainer').click(function() {
+    $('.pola1').removeClass('polaAnimer');
+    $('.pola2').removeClass('polaAnimer');
+    $('.pola3').removeClass('polaAnimer');
   });
 };

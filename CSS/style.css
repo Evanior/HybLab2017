@@ -121,15 +121,44 @@ body {
 }
 .selectedZoomTarget> .inPoint {
 	visibility: visible;
-	background-color: blue;
+/*background-color: blue;*/
 	position: absolute;
 	animation-name: overlay_anim;
 	animation-duration: 20s;
 	height: 100px;
+	/*height: 100px;*/
 	width: 50px;
 	left: 50px;
+	top: -10px;
 }
-#particles-js {
+
+.inPoint img{
+	max-width: 50px;
+	position: absolute;
+}
+
+.inPoint .pola1{
+	left: -30px;
+	display: none;
+}
+
+.inPoint .pola2{
+	left: -13px;
+	top: -5px;
+	display: none;
+}
+
+.inPoint .pola3{
+	left: 3px;
+	top: 2px;
+	display: none;
+}
+.inPoint .polaAnimer{
+	animation-name: overlay_anim;
+	animation-duration: 2s;
+	display: block;
+}
+#particles-js{
 	position: absolute;
 	top: 0;
 	bottom: 0;
