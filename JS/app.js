@@ -1,9 +1,7 @@
 $(document).ready(function(){
   setUp();
-  $('.overlay .overlay_content .skip').click(function(event){
-    console.log('test');
-    event.preventDefault();
-    $('.overlay').hide();
+  $('#p1').hover(function(){
+    $('.split-flap').flapper().val('-312').change();
   });
 });
 
@@ -15,13 +13,22 @@ function typed_text(){
   });
 }
 function setUp(){
+  //initialize split-flap
+  $('#display').flapper().val();
+
 	//particule js
 	particlesJS.load('particles-js', 'assets/particles.json', function() {
 	  console.log('callback - particles.js config loaded');
 	});
 
   // typed content overlay
-  $("#typed_title").typed({strings: ["Qu'est ce que smart city ?"],
+  $("#typed_title").typed({strings: ["Qu'est ce que la smart city ?"],
     typeSpeed: 30, callback: function(){$('.typed-cursor').first().hide();typed_text();}
+  });
+
+  // button skip overlay
+  $('.overlay .overlay_content .skip').click(function(event){
+    event.preventDefault();
+    $('.overlay').hide();
   });
 };
