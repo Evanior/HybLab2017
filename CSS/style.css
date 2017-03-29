@@ -10,7 +10,7 @@ body {
 	background-image:url("../IMG/background.jpg");
 	background-repeat:no-repeat;
 	/* Permet de remonter légèrement le bas de l'image, n'influence pas le placement plein écran */
-	background-position:center center;
+	background-position:bottom;
 	position:relative;
 	width:100vw;
 	height:100vh;
@@ -131,23 +131,19 @@ body {
 	left: 50px;
 	top: -10px;
 }
-
 .inPoint img{
 	max-width: 50px;
 	position: absolute;
 }
-
 .inPoint .pola1{
 	left: -30px;
 	display: none;
 }
-
 .inPoint .pola2{
 	left: -13px;
 	top: -5px;
 	display: none;
 }
-
 .inPoint .pola3{
 	left: 3px;
 	top: 2px;
@@ -166,9 +162,25 @@ body {
 	left: 0;
 	z-index: -100;
 }
-/* SPLIT-FLAP*/
-.split-flap {
-	position: fixed;
-	top: 50px;
-	left: 43%;
+
+/* ODOMETER */
+#date {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	padding:25px 0px;
+}
+#date > *{
+	transform:scale(3);
+}
+.odometer-formatting-mark {
+	display:none;
+}
+.odometer-digit {
+	margin:0px 1px !important;
 }
