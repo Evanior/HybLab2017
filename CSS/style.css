@@ -21,6 +21,68 @@ body {
 	background:url("../IMG/network.png") no-repeat;
 	background-size:cover;
 }
+
+.overlay{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1000;
+	animation-name: overlay_bg_anim;
+  animation-duration: 2s;
+	align-items: center;
+}
+.overlay_bg{
+	position: relative;
+	min-height: 300px;
+	background: rgba(17,98,109,0.7);
+	animation-name: overlay_anim;
+  animation-duration: 2s;
+	width: 100%;
+}
+.overlay_content{
+	display: inline-block;
+	font-family: "Satellite", Helvetica, Arial, sans-serif;
+	width: 100%;
+}
+.overlay_content >p{
+	width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+	padding: 50px;
+}
+.overlay_content >h3{
+	text-align: center;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+.overlay_content .typed{
+	color: white;
+}
+.overlay_content .typed>span{
+	display: inline-block;
+}
+.overlay_content .skip{
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	color: white;
+	text-decoration: none;
+
+}
+@keyframes overlay_anim {
+	0%{transform: translateY(-100%);}
+	100%{transform: translateY(0);}
+}
+@keyframes overlay_bg_anim {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
 .point {
 	width:30px;
 	height:30px;
@@ -28,17 +90,25 @@ body {
 	border:1px solid black;
 	position:absolute;
 	background-color:white;
-	box-shadow:-3px -3px 6px white;
+	box-shadow: 0px 0px 25px 10px white;
+	font-size: 0.1em;
+	line-height: 1em;
 }
-#p1 {top:467px;left:99px;}
-#p2 {top:278px;left:253px;}
-#p3 {top:509px;left:428px;}
-#p4 {top:426px;left:555px;}
-#p5 {top:569px;left:667px;}
-#p6 {top:325px;left:709px;}
-#p7 {top:345px;left:902px;}
-#p8 {top:469px;left:1007px;}
-#p9 {top:309px;left:1110px;}
-#p10 {top:507px;left:1228px;}
-#p11 {top:447px;left:1360px;}
-#p12 {top:291px;left:1453px;}
+
+#p1 {left:97px;top:427px;}
+#p2 {left:245px;top:241px;}
+#p3 {left:421px;top:469px;}
+#p4 {left:549px;top:383px;}
+#p5 {left:655px;top:525px;}
+#p6 {left:701px;top:285px;}
+#p7 {left:891px;top:309px;}
+#p8 {left:995px;top:425px;}
+#p9 {left:1100px;top:275px;}
+#p10 {left:1220px;top:475px;}
+#p11 {left:1344px;top:405px;}
+#p12 {left:1443px;top:255px;}
+
+@font-face {
+	font-family: "Satellite";
+	src: url('../assets/Satellite/Satellite.otf');
+}
