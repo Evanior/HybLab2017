@@ -18,6 +18,28 @@ body {
 	width:100vw;
 	height:100vh;
 	overflow:hidden;
-	background:url("../IMG/network.png") no-repeat;
+	background:url("../IMG/network_p.svg") no-repeat;
 	background-size:cover;
 }
+.point {
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:1px solid black;
+	position:absolute;
+	background-color:white;
+	box-shadow:-3px -3px 6px white;
+}
+
+#p1 {left:97px;top:427px;}
+#p2 {left:245px;top:241px;}
+#p3 {left:421px;top:469px;}
+#p4 {left:549px;top:383px;}
+#p5 {left:655px;top:525px;}
+#p6 {left:701px;top:285px;}
+#p7 {left:891px;top:309px;}
+#p8 {left:995px;top:425px;}
+#p9 {left:1100px;top:275px;}
+#p10 {left:1220px;top:475px;}
+#p11 {left:1344px;top:405px;}
+#p12 {left:1443px;top:255px;}
