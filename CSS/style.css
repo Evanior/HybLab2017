@@ -23,6 +23,9 @@ body {
 }
 
 .overlay{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -32,23 +35,34 @@ body {
 	z-index: 1000;
 	animation-name: overlay_bg_anim;
   animation-duration: 2s;
+	align-items: center;
 }
 .overlay_bg{
-	position:relative;
-	width: 900px;
+	position: relative;
 	min-height: 300px;
-	margin:20% auto;
-	border-radius: 20px;
-	background: rgba(255,255,255,.7);
+	background: rgba(17,98,109,0.7);
 	animation-name: overlay_anim;
   animation-duration: 2s;
+	width: 100%;
 }
 .overlay_content{
 	display: inline-block;
+	font-family: "Satellite", Helvetica, Arial, sans-serif;
+	width: 100%;
+}
+.overlay_content >p{
+	width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+	padding: 50px;
+}
+.overlay_content >h3{
+	text-align: center;
+	padding-top: 25px;
+	text-transform: uppercase;
 }
 .overlay_content .typed{
-	padding: 15px;
-	color: black;
+	color: white;
 }
 .overlay_content .typed>span{
 	display: inline-block;
@@ -57,13 +71,13 @@ body {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
-	color: black;
+	color: white;
 	text-decoration: none;
 
 }
 @keyframes overlay_anim {
-	0%{transform: scale(0);}
-	100%{transform: scale(1);}
+	0%{transform: translateY(-100%);}
+	100%{transform: translateY(0);}
 }
 @keyframes overlay_bg_anim {
 	0%{opacity: 0;}
@@ -91,3 +105,8 @@ body {
 #p10 {left:1220px;top:475px;}
 #p11 {left:1344px;top:405px;}
 #p12 {left:1443px;top:255px;}
+
+@font-face {
+	font-family: "Satellite";
+	src: url('../assets/Satellite/Satellite.otf');
+}
