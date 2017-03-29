@@ -131,24 +131,29 @@ body {
 	position: absolute;
 }
 
-.polaAnimer{
-	animation-name: overlay_anim;
-	animation-duration: 2s;
-}
-
 .inPoint .pola1{
 	left: -30px;
+	display: none;
 }
 
 .inPoint .pola2{
 	left: -13px;
-	top: -5px
+	top: -5px;
+	display: none;
 }
 
 .inPoint .pola3{
 	left: 3px;
 	top: 2px;
+	display: none;
 }
+
+.inPoint .polaAnimer{
+	animation-name: overlay_anim;
+	animation-duration: 2s;
+	display: block;
+}
+
 #particles-js{
 	position: absolute;
 	top: 0;

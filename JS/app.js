@@ -34,4 +34,22 @@ function setUp(){
     event.preventDefault();
     $('.overlay').hide();
   });
+
+  $('.point').click(function() {
+    setTimeout(function(){
+      $('.pola1').addClass('polaAnimer');
+      setTimeout(function(){
+        $('.pola2').addClass('polaAnimer');
+        setTimeout(function(){
+          $('.pola3').addClass('polaAnimer');
+        },4000);
+      },3000);
+    },2000);
+  });
+
+  $('.zoomContainer').click(function() {
+    $('.pola1').removeClass('polaAnimer');
+    $('.pola2').removeClass('polaAnimer');
+    $('.pola3').removeClass('polaAnimer');
+  });
 };
