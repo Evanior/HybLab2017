@@ -24,6 +24,10 @@ function setUp(){
 	var odometer = new Odometer({ el: $('.odometer')[0], value: 123, theme: 'train-station' });
 	odometer.render();
 
+
+
+	odometer.update(555);
+
   // typed content overlay
   $("#typed_title").typed({strings: ["Qu'est ce que smart city ?"],
     typeSpeed: 30, callback: function(){typed_text();}
