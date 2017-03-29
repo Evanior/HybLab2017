@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  setUp();
   typed_title();
   $('.overlay .overlay_content .skip').click(function(event){
     console.log('test');
@@ -6,6 +7,7 @@ $(document).ready(function(){
     $('.overlay').hide();
   });
 });
+
 function typed_title(){
   $("#typed_title").typed({
 strings: ["Qu'est ce que smart city ?"],
@@ -21,4 +23,11 @@ typeSpeed: 10, callback: function(){
     $('.typed-cursor').hide();
   }
 });
+
+function setUp(){
+	particlesJS.load('particles-js', 'assets/particles.json', function() {
+	  console.log('callback - particles.js config loaded');
+	});
+	var odometer = new Odometer({ el: $('.odometer')[0], value: 123, theme: 'train-station' });
+	odometer.render();
 }
