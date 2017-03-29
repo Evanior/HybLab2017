@@ -21,3 +21,51 @@ body {
 	background:url("../IMG/network.png") no-repeat;
 	background-size:cover;
 }
+
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1000;
+	animation-name: overlay_bg_anim;
+  animation-duration: 2s;
+}
+.overlay_bg{
+	position:relative;
+	width: 900px;
+	min-height: 300px;
+	margin:20% auto;
+	border-radius: 20px;
+	background: rgba(255,255,255,.7);
+	animation-name: overlay_anim;
+  animation-duration: 2s;
+}
+.overlay_content{
+	display: inline-block;
+}
+.overlay_content .typed{
+	padding: 15px;
+	color: black;
+}
+.overlay_content .typed>span{
+	display: inline-block;
+}
+.overlay_content .skip{
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	color: black;
+	text-decoration: none;
+
+}
+@keyframes overlay_anim {
+	0%{transform: scale(0);}
+	100%{transform: scale(1);}
+}
+@keyframes overlay_bg_anim {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
