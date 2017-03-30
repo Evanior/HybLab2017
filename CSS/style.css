@@ -165,7 +165,7 @@ body {
 	visibility: visible;
 	position: absolute;
 	animation-name: overlay_anim;
-	animation-duration:1s;
+	animation-duration:2s;
 	height: 100px;
 	width: 50px;
 	/*TODO a refair bien*/
