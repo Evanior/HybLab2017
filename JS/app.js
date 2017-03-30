@@ -73,52 +73,52 @@ $('.point').hover(function(event){
 		anneeEnCours = annee;
 			break;
 		case "p2":
-			annee = 1954;
+			annee = 1673;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p3":
-			annee = 1986;
+			annee = 1954;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p4":
-			annee = 2000;
+			annee = 1986;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p5":
-			annee = 2012;
+			annee = 2000;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p6":
-			annee = 0;
+			annee = 2008;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p7":
-			annee = 0;
+			annee = 2010;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p8":
-			annee = 0;
+			annee = 2012;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p9":
-			annee = 0;
+			annee = 2013;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p10":
-			annee = 0;
+			annee = 2030;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p11":
-			annee = 0;
+			annee = 2050;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
@@ -130,7 +130,24 @@ $('.point').hover(function(event){
 	}
 	$('.odometer').html(annee);
 });
+// gestion du sons text
+$('.inPoint #playAntiquite').click(function(event){
+	event.preventDefault();
+	console.log($('.inPoint #playAntiquite>i').hasClass("fa-play"));
+	if($('.inPoint #playAntiquite>i').hasClass("fa-play")){
+		soundAntiquite.play();
+		$('.inPoint #playAntiquite >i').removeClass("fa-play");
+		$('.inPoint #playAntiquite >i').addClass("fa-pause");
+	}
+	else{
+		console.log('tst');
 
+		$('.inPoint #playAntiquite >i').removeClass("fa-pause");
+		$('.inPoint #playAntiquite >i').addClass("fa-play");
+		soundAntiquite.pause();
+	}
+	event.stopPropagation();
+});
 // Variable qui permet de savoir si on est zoomés ou pas (et donc d'activer le dézoom au clic à la place du zoom)
 var areWeZoomed = false;
 var animPola1;
@@ -155,18 +172,21 @@ $('.point').click(function(event){
 	new Promise(resolve => {
 		animPola2 = setTimeout(() => {
 			resolve($(this).find('.pola2').toggleClass('polaAnimer'));
-			resolve($(this).find('.play').toggleClass('polaAnimer'));
-		}, 3500);
+		}, 2500);
 	});
 	new Promise(resolve => {
 		animPola3 = setTimeout(() => {
-			resolve($(this).find('.pola3').toggleClass('polaAnimer'));
-		}, 7000);
+			resolve($(this).find('.pola3, .play').toggleClass('polaAnimer'));
+		}, 750);
 	});
+	event.stopPropagation();
 });
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
-$("body *:not(body .point)").click(function(event){
+$("body").click(function(event){
+	if($(event.target).hasClass('.point') && $(event.target).hasClass('.play')){
+		return false;
+	}
 	if(areWeZoomed){
 		clearTimeout(animPola1);
 		clearTimeout(animPola2);
@@ -174,16 +194,8 @@ $("body *:not(body .point)").click(function(event){
 		$('.pola1').removeClass('polaAnimer');
 		$('.pola2').removeClass('polaAnimer');
 		$('.pola3').removeClass('polaAnimer');
+		$('.play').removeClass('polaAnimer');
 		zoom.out();
 		areWeZoomed = false;
 	}
-});
-
-// gestion du sons text
-$('.inPoint #playAntiquite').click(function(event){
-	console.log("test");
-	event.preventDefault();
-	soundAntiquite.play();
-	$('.inPoint #playAntiquite >i').removeClass("fa-play");
-	$('.inPoint #playAntiquite >i').addClass("fa-pause");
 });
