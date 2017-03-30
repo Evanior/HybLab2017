@@ -17,7 +17,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.overlay').hide();
 	});
-});
+};
 
 // sound text
 var soundAntiquite = new Howl({
