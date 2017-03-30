@@ -45,46 +45,116 @@ function typed_text(){
 	});
 }
 
+// sound text
+var soundAntiquite = new Howl({
+      src: ['assets/audio/Antiquite.wav']});
+var soundCollabHumain = new Howl({
+      src: ['assets/audio/Appli_collab_humain.wav']});
+var soundCollabTech = new Howl({
+      src: ['assets/audio/Appli_collab_tech.wav']});
+var soundFerme = new Howl({
+      src: ['assets/audio/Fermes_urbaines.wav']});
+var soundMurVege = new Howl({
+      src: ['assets/audio/Mur_vegetal.wav']});
+var soundPanneauSol = new Howl({
+      src: ['assets/audio/Panneau_sol-pho.wav']});
+var soundSingapour = new Howl({
+      src: ['assets/audio/Singapour.wav']});
+var soundVauban = new Howl({
+      src: ['assets/audio/Vauban.wav']});
+var soundWifiLib = new Howl({
+      src: ['assets/audio/WifiLib.wav']});
+
+var soundBruitagesClap = new Howl({
+      src: ['assets/Bruitages/claphyblab.mp3']});
+var soundBruitagesClap2 = new Howl({
+      src: ['assets/Bruitages/clap2hyblab.mp3']});
+var soundBruitagesButton = new Howl({
+      src: ['assets/Bruitages/buttonhyblab.mp3']});
+var soundBruitagesDeZoom = new Howl({
+      src: ['assets/Bruitages/hyplabdezoom.mp3']});
+var soundBruitagesZoom = new Howl({
+      src: ['assets/Bruitages/hyplabzoom.mp3']});
+
 // Gestion de la date (ODOMETER) au survol d'un point
 // au survol de n'importe quel élément ".point" QUI POSSEDE UNE ID -> on refresh l'odomètre (années)
+var anneeEnCours = -2121;
+var d = new Date();
+var n = d.getTime();
+function intervalSoundClap(annee){
+	if(anneeEnCours != annee){
+		d = new Date();
+		var time2 = d.getTime();
+		if(time2 -n >3000){
+			soundBruitagesClap.play();
+			n = time2;
+		}
+	}
+};
 $('.point').hover(function(event){
+
+
 	var annee = 0;
 	switch(event.target.id){
 		case "p1":
-			annee = -312;
+		annee = -312;
+		intervalSoundClap(annee);
+		anneeEnCours = annee;
 			break;
 		case "p2":
 			annee = 1954;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p3":
 			annee = 1986;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p4":
 			annee = 2000;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p5":
 			annee = 2012;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p6":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p7":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p8":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p9":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p10":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p11":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 		case "p12":
 			annee = 0;
+			intervalSoundClap(annee);
+			anneeEnCours = annee;
 			break;
 	}
 	$('.odometer').html(annee);
