@@ -133,18 +133,135 @@ $('.point').hover(function(event){
 // gestion du sons text
 $('.inPoint #playAntiquite').click(function(event){
 	event.preventDefault();
-	console.log($('.inPoint #playAntiquite>i').hasClass("fa-play"));
 	if($('.inPoint #playAntiquite>i').hasClass("fa-play")){
 		soundAntiquite.play();
 		$('.inPoint #playAntiquite >i').removeClass("fa-play");
 		$('.inPoint #playAntiquite >i').addClass("fa-pause");
 	}
 	else{
-		console.log('tst');
-
 		$('.inPoint #playAntiquite >i').removeClass("fa-pause");
 		$('.inPoint #playAntiquite >i').addClass("fa-play");
 		soundAntiquite.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playVauban').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playVauban>i').hasClass("fa-play")){
+		soundVauban.play();
+		$('.inPoint #playVauban >i').removeClass("fa-play");
+		$('.inPoint #playVauban >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playVauban >i').removeClass("fa-pause");
+		$('.inPoint #playVauban >i').addClass("fa-play");
+		soundVauban.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playPanneauSolaire').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playPanneauSolaire>i').hasClass("fa-play")){
+		soundPanneauSol.play();
+		$('.inPoint #playPanneauSolaire >i').removeClass("fa-play");
+		$('.inPoint #playPanneauSolaire >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playPanneauSolaire >i').removeClass("fa-pause");
+		$('.inPoint #playPanneauSolaire >i').addClass("fa-play");
+		soundPanneauSol.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playMurVegetaux').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playMurVegetaux>i').hasClass("fa-play")){
+		soundMurVege.play();
+		$('.inPoint #playMurVegetaux >i').removeClass("fa-play");
+		$('.inPoint #playMurVegetaux >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playMurVegetaux >i').removeClass("fa-pause");
+		$('.inPoint #playMurVegetaux >i').addClass("fa-play");
+		soundMurVege.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playCollabHumain').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playCollabHumain>i').hasClass("fa-play")){
+		soundCollabHumain.play();
+		$('.inPoint #playCollabHumain >i').removeClass("fa-play");
+		$('.inPoint #playCollabHumain >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playCollabHumain >i').removeClass("fa-pause");
+		$('.inPoint #playCollabHumain >i').addClass("fa-play");
+		soundCollabHumain.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playCollabTech').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playCollabTech>i').hasClass("fa-play")){
+		soundCollabTech.play();
+		$('.inPoint #playCollabTech >i').removeClass("fa-play");
+		$('.inPoint #playCollabTech >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playCollabTech >i').removeClass("fa-pause");
+		$('.inPoint #playCollabTech >i').addClass("fa-play");
+		soundCollabTech.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playFermeUrbaine').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playFermeUrbaine>i').hasClass("fa-play")){
+		soundFerme.play();
+		$('.inPoint #playFermeUrbaine >i').removeClass("fa-play");
+		$('.inPoint #playFermeUrbaine >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playFermeUrbaine >i').removeClass("fa-pause");
+		$('.inPoint #playFermeUrbaine >i').addClass("fa-play");
+		soundFerme.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playSingapour').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playSingapour>i').hasClass("fa-play")){
+		soundSingapour.play();
+		$('.inPoint #playSingapour >i').removeClass("fa-play");
+		$('.inPoint #playSingapour >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playSingapour >i').removeClass("fa-pause");
+		$('.inPoint #playSingapour >i').addClass("fa-play");
+		soundSingapour.pause();
+	}
+	event.stopPropagation();
+});
+
+$('.inPoint #playWifiLib').click(function(event){
+	event.preventDefault();
+	if($('.inPoint #playWifiLib>i').hasClass("fa-play")){
+		soundWifiLib.play();
+		$('.inPoint #playWifiLib >i').removeClass("fa-play");
+		$('.inPoint #playWifiLib >i').addClass("fa-pause");
+	}
+	else{
+		$('.inPoint #playWifiLib >i').removeClass("fa-pause");
+		$('.inPoint #playWifiLib >i').addClass("fa-play");
+		soundWifiLib.pause();
 	}
 	event.stopPropagation();
 });
