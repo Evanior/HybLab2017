@@ -139,7 +139,7 @@ var animPola3;
 
 $('.point').click(function(event){
 	if(!areWeZoomed){
-	soundBruitagesZoom.play();
+		soundBruitagesZoom.play();
 		$(this).removeClass('pulsating');
 		zoom.to({
 			element:document.querySelector('#' + event.target.id)
