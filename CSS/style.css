@@ -99,7 +99,14 @@ body {
 	/* box-shadow: 0px 0px 25px 10px white; */
 	font-size: 0.1em;
 	line-height: 1em;
+	transition: .5s;
 }
+
+.point:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
 /* Gestion du halo lumineux animé autour des ".point" */
 .pulsating::after {
 	content:"";
@@ -117,6 +124,10 @@ body {
 @keyframes pulse {
   0%   { opacity: 1; transform: scale(1, 1); }
   100% { opacity: 0; transform: scale(2, 2); }
+}
+
+.pulsating::after:hover{
+	background-color: #d15661;
 }
 
 #p1 {top:371px;left:61px;}
@@ -159,7 +170,7 @@ body {
 }
 .inPoint .pola1 {
 	left: -35px;
-	top: -10px;
+	top: -13px;
 	display: none;
 }
 .inPoint .pola2 {
