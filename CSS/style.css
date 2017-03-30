@@ -168,6 +168,7 @@ body {
 	animation-duration:1s;
 	height: 100px;
 	width: 50px;
+	/*TODO a refair bien*/
 	left: 50px;
 	top: -10px;
 }
