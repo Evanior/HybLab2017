@@ -11,6 +11,7 @@ body {
 	background-repeat:no-repeat;
 	/* Permet de remonter légèrement le bas de l'image, n'influence pas le placement plein écran */
 	background-position:bottom;
+	background-size:cover;
 	position:relative;
 	width:100vw;
 	height:100vh;
@@ -19,10 +20,12 @@ body {
 #network {
 	background-image:url("../IMG/network.svg");
 	background-repeat:no-repeat;
+	background-size:cover;
 	position:fixed;
 	width:100vw;
 	height:100vh;
 	overflow:hidden;
+	margin-top:-85px;
 }
 .overlay {
 	display:-webkit-flex;
@@ -116,18 +119,18 @@ body {
   100% { opacity: 0; transform: scale(2, 2); }
 }
 
-#p1 {left:97px;top:427px;}
-#p2 {left:245px;top:241px;}
-#p3 {left:421px;top:469px;}
-#p4 {left:549px;top:383px;}
-#p5 {left:655px;top:525px;}
-#p6 {left:701px;top:285px;}
-#p7 {left:891px;top:309px;}
-#p8 {left:995px;top:425px;}
-#p9 {left:1100px;top:275px;}
-#p10 {left:1220px;top:475px;}
-#p11 {left:1344px;top:405px;}
-#p12 {left:1443px;top:255px;}
+#p1 {top:371px;left:61px;}
+#p2 {top:181px;left:223px;}
+#p3 {top:411px;left:405px;}
+#p4 {top:329px;left:541px;}
+#p5 {top:471px;left:655px;}
+#p6 {top:229px;left:701px;}
+#p7 {top:250px;left:902px;}
+#p8 {top:371px;left:1013px;}
+#p9 {top:213px;left:1121px;}
+#p10 {top:409px;left:1245px;}
+#p11 {top:111px;left:1317px;}
+#p12 {top:351px;left:1382px;}
 
 @font-face {
 	font-family: "Satellite";
