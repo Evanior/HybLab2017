@@ -183,6 +183,10 @@ body {
 	display: none;
 	z-index: 1;
 }
+.inPoint .play{
+	position: absolute;
+	top:
+}
 .inPoint .polaAnimer {
 	animation-name:overlay_anim;
 	animation-duration:1.5s;
