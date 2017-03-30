@@ -153,13 +153,10 @@ body {
 }
 .selectedZoomTarget> .inPoint {
 	visibility: visible;
-	/*background-color: blue;*/
 	position: absolute;
 	animation-name: overlay_anim;
-	/* WARNING : RIEN au dessus de 3s MAX sur les animations plz (c'était à 20s ! è_é) */
 	animation-duration:1s;
 	height: 100px;
-	/*height: 100px;*/
 	width: 50px;
 	left: 50px;
 	top: -10px;

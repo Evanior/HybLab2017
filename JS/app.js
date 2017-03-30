@@ -84,13 +84,13 @@ var animPola2;
 var animPola3;
 
 $('.point').click(function(event){
-	//if(!areWeZoomed){
+	if(!areWeZoomed){
 		$(this).removeClass('pulsating');
 		zoom.to({
 			element:document.querySelector('#' + event.target.id)
 		});
 		areWeZoomed = true;
-	//}
+	}
 	$(this).toggleClass('selectedZoomTarget');
 	new Promise(resolve => {
 		animPola1 = setTimeout(() => {
