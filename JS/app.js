@@ -17,7 +17,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$('.overlay').hide();
 	});
-};
+});
 
 // sound text
 var soundAntiquite = new Howl({
@@ -138,13 +138,8 @@ var animPola2;
 var animPola3;
 
 $('.point').click(function(event){
-<<<<<<< HEAD
-	if(!areWeZoomed){
-=======
-
 	if(!areWeZoomed){
 	soundBruitagesZoom.play();
->>>>>>> c9c34cb22185cec6a0166d408d62f00a28576153
 		$(this).removeClass('pulsating');
 		zoom.to({
 			element:document.querySelector('#' + event.target.id)
