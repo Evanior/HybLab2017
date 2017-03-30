@@ -87,52 +87,52 @@ $('.point').hover(function(event){
 		anneeEnCours = annee;
 			break;
 		case "p2":
-			annee = 1954;
+			annee = 1673;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p3":
-			annee = 1986;
+			annee = 1954;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p4":
-			annee = 2000;
+			annee = 1986;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p5":
-			annee = 2012;
+			annee = 2000;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p6":
-			annee = 0;
+			annee = 2008;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p7":
-			annee = 0;
+			annee = 2010;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p8":
-			annee = 0;
+			annee = 2012;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p9":
-			annee = 0;
+			annee = 2013;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p10":
-			annee = 0;
+			annee = 2030;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
 		case "p11":
-			annee = 0;
+			annee = 2050;
 			intervalSoundClap(annee);
 			anneeEnCours = annee;
 			break;
@@ -152,13 +152,8 @@ var animPola2;
 var animPola3;
 
 $('.point').click(function(event){
-<<<<<<< HEAD
-	if(!areWeZoomed){
-=======
-
 	if(!areWeZoomed){
 	soundBruitagesZoom.play();
->>>>>>> c9c34cb22185cec6a0166d408d62f00a28576153
 		$(this).removeClass('pulsating');
 		zoom.to({
 			element:document.querySelector('#' + event.target.id)
@@ -185,7 +180,6 @@ $('.point').click(function(event){
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
 $("body *:not(body .point)").click(function(event){
-	console.log("click");
 	if(areWeZoomed){
 		clearTimeout(animPola1);
 		clearTimeout(animPola2);
