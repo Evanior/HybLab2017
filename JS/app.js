@@ -6,7 +6,7 @@ $(document).ready(function(){
 	// Affichage du titre de la popup d'introduction (Typed.js)
 	$("#typed_title").typed({
 		strings:["Qu'est ce que la smart city ?"],
-		typeSpeed:20,
+		typeSpeed:30,
 		callback:function(){
 			$('.typed-cursor').hide();
 		}
@@ -176,4 +176,8 @@ $("body *:not(body .point)").click(function(event){
 		zoom.out();
 		areWeZoomed = false;
 	}
+});
+
+$('#credits').click(function(){
+	window.open('assets/credits.pdf');
 });

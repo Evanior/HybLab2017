@@ -243,4 +243,5 @@ button#credits {
 	border-radius:3px;
 	padding:0px 5px;
 	border:none;
+	cursor:pointer;
 }
