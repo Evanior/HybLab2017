@@ -219,7 +219,7 @@ var zoom = (function(){
 						// Wait with engaging panning as it may conflict with the
 						// zoom transition
 						/*panEngageTimeout = setTimeout( function() {
-							panUpdateInterval = setInterval( pan, 1000 / 60 );
+							panUpdateInterval = setInterval( pan, 1000 / 60 );//FIXME c'est sa qui scroll
 						}, TRANSITION_DURATION );*/
 
 					}

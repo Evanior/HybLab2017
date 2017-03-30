@@ -163,20 +163,20 @@ $('.point').click(function(event){
 		});
 		areWeZoomed = true;
 	}
-	$(this).toggleClass('selectedZoomTarget');
+	$(this).addClass('selectedZoomTarget');
 	new Promise(resolve => {
 		animPola1 = setTimeout(() => {
-			resolve($(this).find('.pola1').toggleClass('polaAnimer'));
+			resolve($(this).find('.pola1').addClass('polaAnimer'));
 		}, 1500);
 	});
 	new Promise(resolve => {
 		animPola2 = setTimeout(() => {
-			resolve($(this).find('.pola2').toggleClass('polaAnimer'));
+			resolve($(this).find('.pola2').addClass('polaAnimer'));
 		}, 2500);
 	});
 	new Promise(resolve => {
 		animPola3 = setTimeout(() => {
-			resolve($(this).find('.pola3, .play').toggleClass('polaAnimer'));
+			resolve($(this).find('.pola3, .play').addClass('polaAnimer'));
 		}, 750);
 	});
 	event.stopPropagation();
@@ -184,7 +184,7 @@ $('.point').click(function(event){
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
 $("body").click(function(event){
-	if($(event.target).hasClass('.point') && $(event.target).hasClass('.play')){
+	if($(event.target).hasClass('.point') && $(event.target).hasClass('.play') && $(event.target).hasClass('.inPoint') && $(event.target).hasClass('.pola')){
 		return false;
 	}
 	if(areWeZoomed){
@@ -194,6 +194,7 @@ $("body").click(function(event){
 		$('.pola1').removeClass('polaAnimer');
 		$('.pola2').removeClass('polaAnimer');
 		$('.pola3').removeClass('polaAnimer');
+		$('.zoomTarget').removeClass('selectedZoomTarget');
 		$('.play').removeClass('polaAnimer');
 		zoom.out();
 		areWeZoomed = false;

@@ -177,20 +177,20 @@ body {
 	position: absolute;
 }
 .inPoint .pola1 {
-	left: -80px;
-	top: -13px;
+	left: -90px;
+	top: -10px;
 	z-index: 2;
 	display: none;
 }
 .inPoint .pola2 {
-	left: -57px;
+	left: -55px;
 	top: -15px;
 	z-index: 3;
 	display: none;
 }
 .inPoint .pola3 {
-	left: -30px;
-	top: -12px;
+	left: -20px;
+	top: -20px;
 	display: none;
 	z-index: 1;
 }
