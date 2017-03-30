@@ -169,12 +169,12 @@ $('.point').click(function(event){
 	new Promise(resolve => {
 		animPola2 = setTimeout(() => {
 			resolve($(this).find('.pola2').toggleClass('polaAnimer'));
-		}, 3500);
+		}, 2500);
 	});
 	new Promise(resolve => {
 		animPola3 = setTimeout(() => {
 			resolve($(this).find('.pola3').toggleClass('polaAnimer'));
-		}, 7000);
+		}, 750);
 	});
 });
 

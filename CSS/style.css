@@ -166,19 +166,22 @@ body {
 	position: absolute;
 }
 .inPoint .pola1 {
-	left: -35px;
+	left: -80px;
 	top: -13px;
+	z-index: 2;
 	display: none;
 }
 .inPoint .pola2 {
-	left: -18px;
+	left: -57px;
 	top: -15px;
+	z-index: 3;
 	display: none;
 }
 .inPoint .pola3 {
-	left: -3px;
+	left: -30px;
 	top: -12px;
 	display: none;
+	z-index: 1;
 }
 .inPoint .polaAnimer {
 	animation-name:overlay_anim;
