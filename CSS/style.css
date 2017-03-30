@@ -238,3 +238,16 @@ body {
 	transform:scale(2);
 	margin-right:3px;
 }
+
+/* Le bouton crédit */
+button#credits {
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	right:7px;
+	bottom:7px;
+	background-color:rgb(17, 98, 109);
+	border-radius:3px;
+	padding:0px 5px;
+	border:none;
+}
