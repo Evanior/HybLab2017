@@ -177,20 +177,20 @@ body {
 	position: absolute;
 }
 .inPoint .pola1 {
-	left: -80px;
-	top: -13px;
+	left: -90px;
+	top: -10px;
 	z-index: 2;
 	display: none;
 }
 .inPoint .pola2 {
-	left: -57px;
+	left: -55px;
 	top: -15px;
 	z-index: 3;
 	display: none;
 }
 .inPoint .pola3 {
-	left: -30px;
-	top: -12px;
+	left: -20px;
+	top: -20px;
 	display: none;
 	z-index: 1;
 }
@@ -250,4 +250,8 @@ button#credits {
 	border-radius:3px;
 	padding:0px 5px;
 	border:none;
+<<<<<<< HEAD
+=======
+	cursor:pointer;
+>>>>>>> 21db1e8323a6a9f2741b5582613984a18f0b1060
 }
