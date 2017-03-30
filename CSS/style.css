@@ -228,3 +228,12 @@ body {
 	transform:scale(2);
 	margin-right:3px;
 }
+
+/*Play of sound text*/
+.play{
+	position: absolute;
+	z-index: 1;
+}
+.play >.fa{
+	color: white;
+}

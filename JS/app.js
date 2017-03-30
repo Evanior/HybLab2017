@@ -167,7 +167,6 @@ $('.point').click(function(event){
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
 $("body *:not(body .point)").click(function(event){
-	console.log("click");
 	if(areWeZoomed){
 		clearTimeout(animPola1);
 		clearTimeout(animPola2);
@@ -178,4 +177,13 @@ $("body *:not(body .point)").click(function(event){
 		zoom.out();
 		areWeZoomed = false;
 	}
+});
+
+// gestion du sons text
+$('.inPoint #playAntiquite').click(function(event){
+	console.log("test");
+	event.preventDefault();
+	soundAntiquite.play();
+	$('.inPoint #playAntiquite >i').removeClass("fa-play");
+	$('.inPoint #playAntiquite >i').addClass("fa-pause");
 });
