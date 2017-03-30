@@ -69,7 +69,7 @@ function intervalSoundClap(annee){
 	if(anneeEnCours != annee){
 		d = new Date();
 		var time2 = d.getTime();
-		if(time2 -n >3000){
+		if(time2 -n >2000){
 			soundBruitagesClap.play();
 			n = time2;
 		}
@@ -152,13 +152,15 @@ var animPola2;
 var animPola3;
 
 $('.point').click(function(event){
-	//if(!areWeZoomed){
+
+	if(!areWeZoomed){
+	soundBruitagesZoom.play();
 		$(this).removeClass('pulsating');
 		zoom.to({
 			element:document.querySelector('#' + event.target.id)
 		});
 		areWeZoomed = true;
-	//}
+	}
 	$(this).toggleClass('selectedZoomTarget');
 	new Promise(resolve => {
 		animPola1 = setTimeout(() => {
