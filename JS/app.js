@@ -130,7 +130,24 @@ $('.point').hover(function(event){
 	}
 	$('.odometer').html(annee);
 });
+// gestion du sons text
+$('.inPoint #playAntiquite').click(function(event){
+	event.preventDefault();
+	console.log($('.inPoint #playAntiquite>i').hasClass("fa-play"));
+	if($('.inPoint #playAntiquite>i').hasClass("fa-play")){
+		soundAntiquite.play();
+		$('.inPoint #playAntiquite >i').removeClass("fa-play");
+		$('.inPoint #playAntiquite >i').addClass("fa-pause");
+	}
+	else{
+		console.log('tst');
 
+		$('.inPoint #playAntiquite >i').removeClass("fa-pause");
+		$('.inPoint #playAntiquite >i').addClass("fa-play");
+		soundAntiquite.pause();
+	}
+	event.stopPropagation();
+});
 // Variable qui permet de savoir si on est zoomés ou pas (et donc d'activer le dézoom au clic à la place du zoom)
 var areWeZoomed = false;
 var animPola1;
@@ -159,13 +176,17 @@ $('.point').click(function(event){
 	});
 	new Promise(resolve => {
 		animPola3 = setTimeout(() => {
-			resolve($(this).find('.pola3').toggleClass('polaAnimer'));
+			resolve($(this).find('.pola3, .play').toggleClass('polaAnimer'));
 		}, 750);
 	});
+	event.stopPropagation();
 });
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
-$("body *:not(body .point)").click(function(event){
+$("body").click(function(event){
+	if($(event.target).hasClass('.point') && $(event.target).hasClass('.play')){
+		return false;
+	}
 	if(areWeZoomed){
 		clearTimeout(animPola1);
 		clearTimeout(animPola2);
@@ -173,6 +194,7 @@ $("body *:not(body .point)").click(function(event){
 		$('.pola1').removeClass('polaAnimer');
 		$('.pola2').removeClass('polaAnimer');
 		$('.pola3').removeClass('polaAnimer');
+		$('.play').removeClass('polaAnimer');
 		zoom.out();
 		areWeZoomed = false;
 	}
