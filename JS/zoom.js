@@ -218,9 +218,9 @@ var zoom = (function(){
 
 						// Wait with engaging panning as it may conflict with the
 						// zoom transition
-						panEngageTimeout = setTimeout( function() {
+						/*panEngageTimeout = setTimeout( function() {
 							panUpdateInterval = setInterval( pan, 1000 / 60 );
-						}, TRANSITION_DURATION );
+						}, TRANSITION_DURATION );*/
 
 					}
 
@@ -261,4 +261,3 @@ var zoom = (function(){
 	}
 
 })();
-
