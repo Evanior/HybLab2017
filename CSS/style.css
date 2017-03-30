@@ -150,7 +150,7 @@ body {
 .play{
 	display: none;
 	position: absolute;
-	top: 22px;
+	top: 17px;
   left: -8px;
 	z-index: 2;
 }
