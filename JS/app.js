@@ -5,11 +5,10 @@ $(document).ready(function(){
 
 	// Affichage du titre de la popup d'introduction (Typed.js)
 	$("#typed_title").typed({
-		strings:["Qu'est ce que smart city ?"],
+		strings:["Qu'est ce que la smart city ?"],
 		typeSpeed:30,
 		callback:function(){
-			$('.typed-cursor').first().hide();
-			typed_text();
+			$('.typed-cursor').hide();
 		}
 	});
 
@@ -19,17 +18,6 @@ $(document).ready(function(){
 		$('.overlay').hide();
 	});
 });
-
-// Fonction d'affichage du texte long d'introduction (Typed.js)
-function typed_text(){
-	$("#typed_text").typed({
-		strings: ["Là, tu te demande sur quoi tu es tombé. On te dit “Smart City” tu vois des hoverboards et des chaussures qui se laçent toutes seules. On te dit “Ville intelligente”, tu trouve ça tout de suite un peu moins stylé. Mais nous on va te dire “Ville maline” et là tu penses présent, tu penses collaboratif, environnement, pratique, économique. Et si t’y pensais pas, maintenant c’est le cas ! Alors laisse-toi guider au fil du temps, et découvre comment en étant malin, ta ville le deviendra aussi !"],
-		typeSpeed: 1,
-		callback: function(){
-			$('.typed-cursor').hide();
-		}
-	});
-}
 
 // sound text
 var soundAntiquite = new Howl({
@@ -77,8 +65,6 @@ function intervalSoundClap(annee){
 };
 //TODO changement de couleur? taille ? pour l'intractiviter
 $('.point').hover(function(event){
-
-
 	var annee = 0;
 	switch(event.target.id){
 		case "p1":
@@ -170,6 +156,7 @@ $('.point').click(function(event){
 	new Promise(resolve => {
 		animPola2 = setTimeout(() => {
 			resolve($(this).find('.pola2').toggleClass('polaAnimer'));
+			resolve($(this).find('.play').toggleClass('polaAnimer'));
 		}, 3500);
 	});
 	new Promise(resolve => {
