@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	// Initialisation de Particles JS
 	particlesJS.load('particles-js', 'assets/particles.json');
@@ -16,21 +17,6 @@ $(document).ready(function(){
 	$('.overlay .overlay_content .skip').click(function(event){
 		event.preventDefault();
 		$('.overlay').hide();
-	});
-
-	// A REVOIR ABSOLUMENT (principe super mais mise en application incorrecte)
-	// SetTimeOut bloque totalement le thread d'affichage ! A ne jamais utiliser !
-	$('.point').click(function(){
-		$('.pola1').addClass('polaAnimer');
-		$('.pola2').addClass('polaAnimer');
-		$('.pola3').addClass('polaAnimer');
-	});
-
-	// Vérifier que le zoomContainer existe toujours, sinon placer ça dans le document clic si areWeZoomed === false
-	$('.zoomContainer').click(function(){
-		$('.pola1').removeClass('polaAnimer');
-		$('.pola2').removeClass('polaAnimer');
-		$('.pola3').removeClass('polaAnimer');
 	});
 });
 
@@ -67,8 +53,6 @@ var soundWifiLib = new Howl({
 
 var soundBruitagesClap = new Howl({
       src: ['assets/Bruitages/claphyblab.mp3']});
-var soundBruitagesClap2 = new Howl({
-      src: ['assets/Bruitages/clap2hyblab.mp3']});
 var soundBruitagesButton = new Howl({
       src: ['assets/Bruitages/buttonhyblab.mp3']});
 var soundBruitagesDeZoom = new Howl({
@@ -91,6 +75,7 @@ function intervalSoundClap(annee){
 		}
 	}
 };
+//TODO changement de couleur? taille ? pour l'intractiviter
 $('.point').hover(function(event){
 
 
@@ -161,22 +146,47 @@ $('.point').hover(function(event){
 });
 
 // Variable qui permet de savoir si on est zoomés ou pas (et donc d'activer le dézoom au clic à la place du zoom)
-// PS @Tim, @Dimi : elle est globale, on peut donc l'appeler partout
 var areWeZoomed = false;
+var animPola1;
+var animPola2;
+var animPola3;
 
-// Au clic sur n'importe quel élément classe ".point" QUI POSSEDE UNE ID -> on zoom
 $('.point').click(function(event){
-	// TODO : on devrait supprimer le halo lumineux ici je pense, histoire qu'on voit les points déjà visités
-	$('#' + event.target.id).removeClass('pulsating');
-	zoom.to({
-		element:document.querySelector('#' + event.target.id)
+	//if(!areWeZoomed){
+		$(this).removeClass('pulsating');
+		zoom.to({
+			element:document.querySelector('#' + event.target.id)
+		});
+		areWeZoomed = true;
+	//}
+	$(this).toggleClass('selectedZoomTarget');
+	new Promise(resolve => {
+		animPola1 = setTimeout(() => {
+			resolve($(this).find('.pola1').toggleClass('polaAnimer'));
+		}, 1500);
 	});
-	areWeZoomed = true;
+	new Promise(resolve => {
+		animPola2 = setTimeout(() => {
+			resolve($(this).find('.pola2').toggleClass('polaAnimer'));
+		}, 3500);
+	});
+	new Promise(resolve => {
+		animPola3 = setTimeout(() => {
+			resolve($(this).find('.pola3').toggleClass('polaAnimer'));
+		}, 7000);
+	});
 });
 
 /* Gestion de la fonction de zoom arrière (unzoom) */
-$(document).click(function(event){
-	if(!areWeZoomed){
+$("body *:not(body .point)").click(function(event){
+	console.log("click");
+	if(areWeZoomed){
+		clearTimeout(animPola1);
+		clearTimeout(animPola2);
+		clearTimeout(animPola3);
+		$('.pola1').removeClass('polaAnimer');
+		$('.pola2').removeClass('polaAnimer');
+		$('.pola3').removeClass('polaAnimer');
 		zoom.out();
 		areWeZoomed = false;
 	}
