@@ -6,7 +6,7 @@ $(document).ready(function(){
 	// Affichage du titre de la popup d'introduction (Typed.js)
 	$("#typed_title").typed({
 		strings:["Qu'est ce que la smart city ?"],
-		typeSpeed:30,
+		typeSpeed:20,
 		callback:function(){
 			$('.typed-cursor').hide();
 		}
