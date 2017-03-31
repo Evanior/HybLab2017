@@ -293,7 +293,7 @@ $('.point').click(function(event){
 	});
 	new Promise(resolve => {
 		animPola3 = setTimeout(() => {
-			resolve($(this).find('.pola3, .play').addClass('polaAnimer'));
+			resolve($(this).find('.pola3, .play').addClass('polaAnimer'));//TODO a revoir
 		}, 750);
 	});
 	event.stopPropagation();
