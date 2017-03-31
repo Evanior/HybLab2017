@@ -161,6 +161,7 @@ body {
 .zoomTarget> .inPoint {
 	visibility: hidden;
 }
+/*TODO a revoir la position pour les pola*/
 .selectedZoomTarget> .inPoint {
 	visibility: visible;
 	position: absolute;
