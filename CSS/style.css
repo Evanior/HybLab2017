@@ -150,8 +150,8 @@ body {
 .play{
 	display: none;
 	position: absolute;
-	top: 17px;
-  left: -11px;
+	top: 7px;
+   left: 39px;
 	z-index: 2;
 }
 .play >.fa{
@@ -168,29 +168,25 @@ body {
 	animation-duration:2s;
 	height: 100px;
 	width: 50px;
-	/*TODO a refair bien*/
-	left: 50px;
-	top: -10px;
 }
 .inPoint img {
 	max-width: 30px;
 	position: absolute;
 }
 .inPoint .pola1 {
-	left: -90px;
-	top: -10px;
+	left: -40px;
 	z-index: 2;
 	display: none;
 }
 .inPoint .pola2 {
-	left: -55px;
-	top: -15px;
+	left: -5px;
+	top: -5px;
 	z-index: 3;
 	display: none;
 }
 .inPoint .pola3 {
-	left: -20px;
-	top: -20px;
+	left: 30px;
+	top: -10px;
 	display: none;
 	z-index: 1;
 }
